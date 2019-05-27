@@ -9,7 +9,7 @@ class Turtle:
     weapon = ""
     battle_style = ""
 
-    def to_string(self):
+    def show_turtle(self):
         print("-----------------------"
               , "\nActual Name:", self.actual_name
               , "\nScientific Name:", self.science_naming
@@ -18,6 +18,20 @@ class Turtle:
               , "\nWeapon:", self.weapon
               , "\nBattle Style: " + self.battle_style
               , "\n-----------------------")
+
+    def to_string(self):
+        return "Actual Name: "\
+               + self.actual_name \
+               + " Scientific Name: "\
+               + self.science_naming \
+               + " Weight: " \
+               + str(self.weight) \
+               + " Swimming Speed: " \
+               + str(self.swimming_speed) \
+               + " Weapon: " \
+               + self.weapon \
+               + " Battle Style: " \
+               + self.battle_style
 
     def __init__(
             self,
@@ -69,9 +83,9 @@ def main():
         "Katanas",
         "Karate")
 
-    leonardo.to_string()
-    donatello.to_string()
-    rafael.to_string()
+    print(leonardo.to_string())
+    print(donatello.to_string())
+    print(rafael.to_string())
 
     Turtle.show_sensei()
 
